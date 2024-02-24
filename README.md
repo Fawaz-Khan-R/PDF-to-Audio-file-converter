@@ -27,10 +27,10 @@ The PDF to Audio Converter is a web application built with Flask that allows use
 To run the PDF to Audio Converter locally:
 1. Clone this repository.
 2. Open your terminal.
-3. Install the required dependencies (`pip install pyttsx3 PyPDF2 flask`).
+3. Install the required dependencies `pip install pyttsx3 PyPDF2 flask`.
 4. Go to the path where the main.py file is located.
-5. Run the Flask application (`python app.py`).
-6. Access the application in your web browser (`http://localhost:5000` by default).
+5. Run the Flask application `python app.py`.
+6. Access the application in your web browser `http://localhost:5000` (by default).
 
 ## Technologies Used
 
