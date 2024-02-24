@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Audio Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>PDF to Audio Converter</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file">Select PDF file:</label><br>
+        <input type="file" id="file" name="file" required><br>
+        
+        <label for="scanning_option">Select Scanning Option:</label><br>
+        <select id="scanning_option" name="scanning_option">
+            <option value="entire_document">Entire Document</option>
+            <option value="page_range">Page Range</option>
+            <option value="keyword_specific">Keyword Specific</option>
+        </select><br>
+        
+        <div id="page_range_fields" style="display: none;">
+            <label for="start_page">Start Page:</label>
+            <input type="number" id="start_page" name="start_page" value="1"><br>
+            <label for="end_page">End Page:</label>
+            <input type="number" id="end_page" name="end_page" value="1"><br>
+        </div>
+        
+        <div id="keyword_specific_fields" style="display: none;">
+            <label for="keyword">Keyword:</label>
+            <input type="text" id="keyword" name="keyword"><br>
+        </div>
+        
+        <input type="submit" value="Convert to Audio">
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
